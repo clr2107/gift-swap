@@ -1,0 +1,290 @@
+/* line 1, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 24, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 28, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 33, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 71, /Users/catherinerice/Desktop/gift-swap/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+ body {
+   padding-top: 60px;
+   background: LightGray;
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ footer {
+   margin-top: 100px;
+ }
+
+ table, td, th {
+   vertical-align: middle; border: none;
+ }
+
+table {
+  background-color: white;
+}
+ th {
+   border-bottom: 1px solid #DDD;
+ }
+
+#giftshare {
+  text-align: center;
+}
+
+img {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#gift {
+  position: absolute;
+  margin: auto;
+}
+
+#all-events tr th, #all-events tr td {
+  border: 2px solid DarkBlue;
+  padding: 10px;
+  margin: 10px;
+}
+
+.navbar .navbar-container {
+background-color: black;
+color: white;
+}
+
+.nav-link:hover {
+  background-color: LightBlue;
+  /*color: white;*/
+}
+
+.nav .nav-link .navbar-link {
+color: white;
+}
+
+.navbar .navbar-brand {
+  color: white;
+}
+
+.nav .navbar-text {
+  color: white;
+}
+
+
+
+/*.navbar .navlink .navbar-link {
+  color: white;
+}
+
+.navbar .nav-link .navbar-link:hover {
+  color: white;
+}*/
+.navbar-header .navbar-brand:hover {
+  background-color: LightBlue;
+
+
+}
+
+#gift-result {
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.cursive {
+}
+
+.carousel-inner {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.btn {
+  outline: 0;
+  border: none;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: inset 2px -3px rgba(0,0,0,0.15);
+}
+
+
+
+h1, h2 {
+  color: black;
+
+}
+
+#giftshare-title {
+  font-size: 40px;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+}
+
+.btn {
+
+}
+
+.res {
+  column-count: 3;
+}
+
+.aws_results {
+
+  padding: 10px;
+  margin: 10px;
+  overflow: scroll;
+}
+
+.navbar ul li {
+  padding: 0px;
+  margin: 0px;
+}
+
+#giftshare-title {
+
+}
+
+th {
+  background-color: MidnightBlue;
+  color: white;
+}
+
+#creators-list {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.results-container {
+
+
+}
+
+.carousel-inner .item {
+  max-height: 300px;
+  height: 300px;
+}
+
+.carousel-inner .item img {
+  height: 100%;
+}
+
+.carousel-inner .item img.item-2 {
+  width: auto;
+}
+
+
+#carousel {
+    margin-left: -11%;
+    margin-right: -11%;
+    border-radius: 0;
+}
+
+.carousel-inner {
+    border-radius: 0;
+}
+
+.carousel-caption p {
+    margin-bottom: 0px;
+}
+
+.results-item {
+border: 5px solid blue;
+}
+
+
+

@@ -23222,3 +23222,157 @@ Processing by WelcomeController#show as HTML
 Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-19 19:27:39 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/welcome/show" for 127.0.0.1 at 2017-11-19 19:27:39 -0500
+Processing by WelcomeController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 487ms (Views: 405.2ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-11-19 19:27:45 -0500
+Processing by EventsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mParticipation Load (7.4ms)[0m  [1m[34mSELECT  "participations".* FROM "participations" WHERE "participations"."participant_id" = $1 LIMIT $2[0m  [["participant_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" INNER JOIN "participations" ON "events"."id" = "participations"."event_id" WHERE "participations"."participant_id" = $1[0m  [["participant_id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered events/index.html.erb within layouts/application (47.1ms)
+Completed 200 OK in 176ms (Views: 79.8ms | ActiveRecord: 24.2ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-11-19 19:27:50 -0500
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (681.9ms)
+  Rendered events/new.html.erb within layouts/application (685.4ms)
+Completed 200 OK in 722ms (Views: 716.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-11-19 19:27:59 -0500
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GCDYO8CgtNK1X8DYYkUN9dqK2dTYMp3rrhLCyCC285N8S3CNSa50QhNeG6/ZtnId71pU583JUmObabGtU5P4ow==", "event"=>{"name"=>"tfihkfk", "description"=>"khjlk", "suggested_budget"=>"20", "creator_id"=>"2"}, "commit"=>"Create exchange"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (14.1ms)[0m  [1m[32mINSERT INTO "events" ("name", "description", "suggested_budget", "creator_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "tfihkfk"], ["description", "khjlk"], ["suggested_budget", "20"], ["creator_id", 2], ["created_at", "2017-11-20 00:27:59.679353"], ["updated_at", "2017-11-20 00:27:59.679353"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/9
+Completed 302 Found in 34ms (ActiveRecord: 23.0ms)
+
+
+Started GET "/events/9" for 127.0.0.1 at 2017-11-19 19:27:59 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "participations" ON "users"."id" = "participations"."participant_id" WHERE "participations"."event_id" = $1[0m  [["event_id", 9]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "participations" ON "users"."id" = "participations"."participant_id" WHERE "participations"."event_id" = $1[0m  [["event_id", 9]]
+  Rendered events/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 56ms (Views: 42.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/events/9/participations/new" for 127.0.0.1 at 2017-11-19 19:28:01 -0500
+Processing by ParticipationsController#new as HTML
+  Parameters: {"event_id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering participations/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "participations" ON "users"."id" = "participations"."participant_id" WHERE "participations"."event_id" = $1[0m  [["event_id", 9]]
+  Rendered participations/_form.html.erb (4.8ms)
+  Rendered participations/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 47ms (Views: 40.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/events/9/participations" for 127.0.0.1 at 2017-11-19 19:28:06 -0500
+Processing by ParticipationsController#create as HTML
+  Parameters: {"authenticity_token"=>"PJ/xvA4LObYaXScR7/K69+BdBl2BoiuXNYBRi5DKQpNY9FkKhwX5Jrxc/GZUAcUf1Y2LbpRZ5B8A+yLu4+9Jow==", "user"=>{"email"=>"a@gmail.com"}, "event_id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mParticipation Load (0.3ms)[0m  [1m[34mSELECT  "participations".* FROM "participations" WHERE "participations"."participant_id" = $1 AND "participations"."event_id" = $2 LIMIT $3[0m  [["participant_id", 2], ["event_id", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (13.9ms)[0m  [1m[32mINSERT INTO "participations" ("participant_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["participant_id", 2], ["event_id", 9], ["created_at", "2017-11-20 00:28:06.394091"], ["updated_at", "2017-11-20 00:28:06.394091"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "participations" ("participant_id", "event_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["participant_id", 4], ["event_id", 9], ["created_at", "2017-11-20 00:28:06.417285"], ["updated_at", "2017-11-20 00:28:06.417285"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/events/9/participations/new
+Completed 302 Found in 38ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/events/9/participations/new" for 127.0.0.1 at 2017-11-19 19:28:06 -0500
+Processing by ParticipationsController#new as HTML
+  Parameters: {"event_id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering participations/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "participations" ON "users"."id" = "participations"."participant_id" WHERE "participations"."event_id" = $1[0m  [["event_id", 9]]
+  Rendered participations/_form.html.erb (5.2ms)
+  Rendered participations/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 58ms (Views: 38.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/9?authenticity_token=HpikcWhJImfL7iMq9wJEpfDbEH5f4HN3UIXmSJSJx0Z68wzH4Ufi923v%2BF1M8TtNxQudTUobvP9l%2FpUt56zMdg%3D%3D" for 127.0.0.1 at 2017-11-19 19:28:08 -0500
+Processing by EventsController#show as HTML
+  Parameters: {"authenticity_token"=>"HpikcWhJImfL7iMq9wJEpfDbEH5f4HN3UIXmSJSJx0Z68wzH4Ufi923v+F1M8TtNxQudTUobvP9l/pUt56zMdg==", "id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE Event Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "participations" ON "users"."id" = "participations"."participant_id" WHERE "participations"."event_id" = $1[0m  [["event_id", 9]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "participations" ON "users"."id" = "participations"."participant_id" WHERE "participations"."event_id" = $1[0m  [["event_id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mWishlistItem Load (0.5ms)[0m  [1m[34mSELECT  "wishlist_items".* FROM "wishlist_items" WHERE "wishlist_items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "gift_exchanges" ("recipient_id", "sender_id", "event_id", "wishlist_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["recipient_id", 4], ["sender_id", 2], ["event_id", 9], ["wishlist_item_id", 1], ["created_at", "2017-11-20 00:28:08.560425"], ["updated_at", "2017-11-20 00:28:08.560425"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mWishlistItem Load (0.6ms)[0m  [1m[34mSELECT  "wishlist_items".* FROM "wishlist_items" WHERE "wishlist_items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "gift_exchanges" ("recipient_id", "sender_id", "event_id", "wishlist_item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["recipient_id", 2], ["sender_id", 4], ["event_id", 9], ["wishlist_item_id", 1], ["created_at", "2017-11-20 00:28:08.575062"], ["updated_at", "2017-11-20 00:28:08.575062"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 130ms (Views: 38.7ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/wishlists/4" for 127.0.0.1 at 2017-11-19 19:28:12 -0500
+Processing by WishlistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mWishlist Load (0.5ms)[0m  [1m[34mSELECT  "wishlists".* FROM "wishlists" WHERE "wishlists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering wishlists/show.html.erb within layouts/application
+  [1m[36mGift Load (6.9ms)[0m  [1m[34mSELECT "gifts".* FROM "gifts" INNER JOIN "wishlist_items" ON "gifts"."id" = "wishlist_items"."gift_id" WHERE "wishlist_items"."wishlist_id" = $1 ORDER BY "gifts"."price" ASC[0m  [["wishlist_id", 4]]
+  Rendered wishlists/show.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 104ms (Views: 65.6ms | ActiveRecord: 14.3ms)
+
+

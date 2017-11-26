@@ -8,8 +8,6 @@ Members: David Skaggs, Andres Arias, Catherine Rice, Thierry Moudiki
 
 Technologies: Ruby on Rails
 
-Idea by: Andres Arias
-
 * Ruby version: 2.3.3
 
 * System dependencies

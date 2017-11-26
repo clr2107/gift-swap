@@ -1,6 +1,8 @@
 # README
 
-Gift Swap: A Secret Santa Organizer
+Gift Swap: A 'Secret Santa' Organizer
+
+Dev Bootcamp Final Project, November 2017
 
 Members: David Skaggs, Andres Arias, Catherine Rice, Thierry Moudiki
 

@@ -1,17 +1,14 @@
 # README
 
-#Gift Swap: A Secret Santa Organizer
-#Members: David, Andres, Catherine, Thierry
-#User Stories:
-#Built using Ruby on Rails
-#Idea by: Andres Arias
+Gift Swap: A 'Secret Santa' Organizer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Dev Bootcamp Final Project, November 2017
 
-Things you may want to cover:
+Members: David Skaggs, Andres Arias, Catherine Rice, Thierry Moudiki
 
-* Ruby version
+Technologies: Ruby on Rails
+
+* Ruby version: 2.3.3
 
 * System dependencies
 

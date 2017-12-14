@@ -55,7 +55,7 @@
   <% current_participant = participants[index] %>
   <% if current_user.first_name == current_participant.first_name %>
   <% assignee = assignees[index] %>
-   <p><%= current_participant.first_name %>, you have: <a href="/wishlists/<%= assignee.id %>"><%= assignee.first_name %></a></p>
+   <p><%= current_participant.first_name %>, you have: <a href="/wishlists/<%= assignee.id %>"><%= assignee.first_name %> <%=assignee.last_name %></a></p>
     <br>
   <% end %>
   <% end %>
